@@ -13,3 +13,9 @@ How is the staging area different from the working directory and the repository?
 	needed for the commit vs ones that aren't. It allows you to work on
 	changes in unrelated files for future commits while still working on
 	important changes in relevant files for the very next commit.
+
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+	Double check that all necessary and only necessary changes are ready for
+	a logical commit and make adjustments before committing.
