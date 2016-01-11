@@ -1,0 +1,15 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+	.git directory for metadata is created and master branch for repo is
+	established. Needed to store the info about which files are in repo
+	as well as info tracking commits.
+
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	It is merely a list of files rather than an actual set of files. It
+	allows you to assemble a sensible commit that spans several files
+	bit by bit and allows you to keep track of which files are ready or
+	needed for the commit vs ones that aren't. It allows you to work on
+	changes in unrelated files for future commits while still working on
+	important changes in relevant files for the very next commit.
