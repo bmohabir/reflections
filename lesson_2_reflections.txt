@@ -1,46 +1,47 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-	.git directory for metadata is created and master branch for repo is
-	established. Needed to store the info about which files are in repo
-	as well as info tracking commits.
+	.git directory is created and master branch for repo is established. Needed to store info about which files
+	are	contained in the repo as well as the metadata to track commits.
 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-	It is merely a list of files rather than an actual set of files. It
-	allows you to assemble a sensible commit that spans several files
-	bit by bit and allows you to keep track of which files are ready or
-	needed for the commit vs ones that aren't. It allows you to work on
-	changes in unrelated files for future commits while still working on
-	important changes in relevant files for the very next commit.
+	Staging area is a list of changed files you want to include in the next commit, whereas the working directory
+	contains the actual files to edit and test. It allows you to assemble a sensible commit for	changes spanning
+	multiple files and allows you to work on unrelated code in the repo without adding unrelated changes to the same
+	commit.
 
 
 How can you use the staging area to make sure you have one commit per logical change?
 
-	Double check that all necessary and only necessary changes are ready for
-	a logical commit and make adjustments before committing.
+	Double check that all necessary and only necessary changes are staged for a logical commit and make adjustments
+	before committing to avoid bad commits.
 
 
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
 
-	Making major changes to working code, adding a major non-critical feature
-	that may take time to get stable. Allows addressing of different
-	priorities independently without breaking entire project over one aspect.
+	Making major changes to working code, adding a major non-critical feature that may take time to get stable while
+	leaving stable code intact for more important improvements. Allows addressing of different priorities in parallel
+	without breaking entire project over a lower-priority change or getting confused over too many unrelated changes
+	in one timeline.
 
 
 How do the diagrams help you visualize the branch structure?
 
-	Diagrams are inherently visual
+	They show the hierarchy of the structure where each commit is change based only on the code in its parent commits,
+	making some commits directly related to a common source while others are directly based on differing sources.
 
 
 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
-	Checked out branch is updated with changes from merged branch(es) and new
-	HEAD becomes child to all merged commits
+	The checked out branch is updated with changes from merged branch(es) and new 'HEAD' becomes child to all merged
+	commits.
 
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
 
-	Automatic merging can save significant time combining large amounts of
-	code that would not normally create conflicts, manual ensures that code
-	from both branches is properly integrated and no new bugs are introduced
+	Automatic merging can save significant time combining large amounts of code that would not normally create
+	conflicts, but conflicts may arise when there are incompatible or too drastic changes. Manual mergine allows
+	decisions to be made on how to integrate significant or conflicting code differences, but can be tedious when
+	commits are very far apart due to branching and will require significant code addition and removal across many
+	files.
