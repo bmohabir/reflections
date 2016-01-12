@@ -1,13 +1,13 @@
 What happens when you initialize a repository? Why do you need to do it?
 
 	.git directory is created and master branch for repo is established. Needed to store info about which files
-	are	contained in the repo as well as the metadata to track commits.
+	are contained in the repo as well as the metadata to track commits.
 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 	Staging area is a list of changed files you want to include in the next commit, whereas the working directory
-	contains the actual files to edit and test. It allows you to assemble a sensible commit for	changes spanning
+	contains the actual files to edit and test. It allows you to assemble a sensible commit for changes spanning
 	multiple files and allows you to work on unrelated code in the repo without adding unrelated changes to the same
 	commit.
 
